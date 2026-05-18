@@ -1,0 +1,8 @@
+{
+  "name": "Escalas e Modos - Página de Vendas",
+  "description": "Página de vendas de alta conversão para o guia prático de escalas e modos gregos para tecladistas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
