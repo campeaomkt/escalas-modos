@@ -19,7 +19,8 @@ import {
   Users,
   Award,
   Keyboard,
-  ArrowRight
+  ArrowRight,
+  Mail
 } from "lucide-react";
 import React, { useState } from "react";
 import { cn } from "./lib/utils";
@@ -371,7 +372,7 @@ export default function App() {
               <div className="flex gap-4">
                  <div className="flex items-center gap-2 text-slate-500">
                     <Users className="w-5 h-5" />
-                    <span className="text-sm font-medium">10k+ Seguidores</span>
+                    <span className="text-sm font-medium">30k+ Seguidores</span>
                  </div>
                  <div className="flex items-center gap-2 text-slate-500">
                     <Award className="w-5 h-5" />
@@ -383,7 +384,24 @@ export default function App() {
         </div>
       </section>
 
-      {/* 8. Offer Block */}
+      {/* 8. Delivery Information (How you receive) */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <div className="bg-indigo-50 rounded-[2.5rem] p-8 md:p-12 border border-indigo-100 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="w-20 h-20 md:w-24 md:h-24 bg-indigo-500 rounded-3xl flex items-center justify-center shrink-0 shadow-lg shadow-indigo-200">
+              <Mail className="w-10 h-10 md:w-12 md:h-12 text-white" />
+            </div>
+            <div className="text-center md:text-left">
+              <h2 className="text-2xl md:text-4xl font-black text-slate-900 mb-4">Como você vai receber?</h2>
+              <p className="text-slate-600 text-lg md:text-xl leading-relaxed">
+                Assim que a sua compra for confirmada, o acesso ao material será enviado <span className="font-bold text-indigo-600">automaticamente para o seu e-mail</span>. Você poderá baixar o PDF e começar a estudar em menos de 2 minutos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 9. Offer Block */}
       <section id="oferta" className="py-16 md:py-24 bg-[#0F172A] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-indigo-500/10 blur-[120px] rounded-full" />
         
