@@ -8,6 +8,7 @@ import {
   Music, 
   CheckCircle2, 
   ChevronRight, 
+  ChevronDown,
   Star, 
   BookOpen, 
   Terminal, 
@@ -72,6 +73,46 @@ const Card = ({ children, className, key }: { children: React.ReactNode; classNa
     {children}
   </div>
 );
+
+const FAQItem = ({ question, answer }: { question: string; answer: string; key?: React.Key }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-slate-200 last:border-0">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full py-6 flex items-center justify-between gap-4 text-left group transition-colors"
+      >
+        <span className={cn(
+          "text-lg md:text-xl font-bold transition-colors",
+          isOpen ? "text-indigo-600" : "text-slate-900 group-hover:text-indigo-500"
+        )}>
+          {question}
+        </span>
+        <div className={cn(
+          "shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300",
+          isOpen ? "bg-indigo-600 text-white rotate-180" : "bg-slate-100 text-slate-400 group-hover:bg-indigo-50 group-hover:text-indigo-400"
+        )}>
+          <ChevronDown className="w-5 h-5" />
+        </div>
+      </button>
+      <motion.div
+        initial={false}
+        animate={{ 
+          height: isOpen ? "auto" : 0,
+          opacity: isOpen ? 1 : 0,
+          marginBottom: isOpen ? 24 : 0
+        }}
+        transition={{ duration: 0.3, ease: [0.04, 0.62, 0.23, 0.98] }}
+        className="overflow-hidden"
+      >
+        <p className="text-slate-600 text-base md:text-lg leading-relaxed pr-12">
+          {answer}
+        </p>
+      </motion.div>
+    </div>
+  );
+};
 
 
 // --- Page Content ---
@@ -474,17 +515,14 @@ export default function App() {
             <HelpCircle className="w-12 h-12 text-indigo-600 mx-auto mb-4" />
             <h2 className="text-4xl font-black">Perguntas Frequentes</h2>
           </div>
-          <div className="space-y-6">
+          <div className="bg-white border border-slate-200 rounded-[2.5rem] px-8 md:px-12 shadow-sm">
             {[
               { q: "Como recebo o produto?", a: "Imediatamente após a confirmação do pagamento, você recebe um e-mail com o link de acesso ao PDF e aos bônus." },
               { q: "Serve para iniciantes?", a: "Sim! O guia foi feito especialmente para quem quer pular a parte chata da teoria e ir direto para as teclas." },
               { q: "Posso imprimir o PDF?", a: "Sim, o arquivo está em alta resolução e pode ser impresso para ficar em cima do seu teclado." },
               { q: "O pagamento é seguro?", a: "Totalmente. Utilizamos as maiores plataformas de pagamento do Brasil, com criptografia de ponta." }
             ].map((faq, i) => (
-              <div key={i} className="bg-white border border-slate-200 p-8 rounded-2xl">
-                <h4 className="font-bold text-lg mb-2">{faq.q}</h4>
-                <p className="text-slate-600 leading-relaxed">{faq.a}</p>
-              </div>
+              <FAQItem key={i} question={faq.q} answer={faq.a} />
             ))}
           </div>
         </div>
