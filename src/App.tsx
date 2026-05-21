@@ -269,8 +269,8 @@ export default function App() {
                 {[
                   "Diagramas de Teclado em Alta Resolução (PDF)",
                   "Todos os 12 Tons Mapeados Individualmente",
-                  "Todas as Escalas (Maior, Menor, Pentatônica, Blues)",
-                  "Os 7 Modos Gregos Completos"
+                  "Todas as Pentatônicas & Penta Blues para Improvisação Livre",
+                  "Os 7 Modos Gregos Completos e Aplicados"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3 md:gap-4">
                     <div className="mt-1 bg-green-100 p-1 rounded-full shrink-0">
@@ -311,7 +311,7 @@ export default function App() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             {[
               { type: "Essenciais", items: ["Maiores e Menores Naturais", "Menores Harmônicas", "Menores Melódicas"] },
-              { type: "Modernas", items: ["Pentatônicas Maiores", "Pentatônicas Menores", "Penta Blues (Vibe Profissional)"] },
+              { type: "Todas as Pentatônicas", items: ["Pentatônicas Maiores (Estilo Pop/Worship)", "Pentatônicas Menores (Licks Rápidos)", "Penta Blues Completa (Notas Especiais)", "Mapeamento Completo em todos os 12 tons"] },
               { type: "Modos Gregos", items: ["Todos os 7 Modos Luxuosos", "Aplicações Práticas", "Visualização em 12 Tons"] }
             ].map((box, i) => (
               <div key={i} className="bg-slate-50 p-8 rounded-3xl border border-slate-100 hover:border-indigo-200 transition-colors">
@@ -333,6 +333,94 @@ export default function App() {
             </div>
             <div className="h-12 w-px bg-white/10 hidden md:block" />
             <p className="text-slate-400 text-sm max-w-xs text-left">Totalmente visual: você olha para o diagrama e repete no seu teclado. Sem leitura de partitura necessária.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* 4.5. New Dedicated Section: Pentatonicos e Improvisação */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-indigo-900 to-indigo-950 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,#4f46e5_0,transparent_40%)] opacity-40" />
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-12 md:gap-16 items-center">
+            
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 bg-indigo-500/20 border border-indigo-400/30 px-3 py-1 rounded-full text-indigo-300 text-xs font-bold uppercase tracking-widest">
+                <Zap className="w-4 h-4 text-amber-400 animate-pulse" />
+                <span>SUPER NOVIDADE ADICIONADA</span>
+              </div>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tight leading-tight">
+                Domine a Improvisação:<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-200">
+                  Todas as Pentatônicas & Blues
+                </span>
+              </h2>
+              <p className="text-slate-300 text-base md:text-lg leading-relaxed">
+                Esqueça aquelas teorias difíceis e cansativas. Se você quer fazer solos expressivos e que tocam a alma de quem ouve, o segredo é dominar as <strong>Pentatônicas</strong> e a clássica <strong>Penta Blues</strong>. Elas eliminam as "notas de erro" e te dão segurança imediata para improvisar.
+              </p>
+              
+              <div className="space-y-4 pt-4">
+                {[
+                  {
+                    title: "Pentatônicas Maiores e Menores Completas",
+                    desc: "O shape seguro para deslizar os dedos por qualquer música popular, worship, jazz ou sertanejo em todos os 12 tons."
+                  },
+                  {
+                    title: "Lendária Penta Blues & Nota Blue Note",
+                    desc: "Toque as notas de tensão e expressividade que dão aquela sonoridade sofisticada de quem realmente domina o piano e teclado."
+                  },
+                  {
+                    title: "Segurança Total nos Seus Solos",
+                    desc: "Como a escala tem apenas 5 notas estruturadas que sempre combinam entre si, você improvisa com a certeza de que nenhuma nota vai soar fora de tom."
+                  }
+                ].map((item, idx) => (
+                  <div key={idx} className="flex gap-4 items-start bg-white/5 border border-white/10 p-5 rounded-2xl hover:bg-white/10 transition-all duration-300">
+                    <div className="bg-amber-400 text-indigo-950 p-2 rounded-xl font-bold shrink-0 text-sm">
+                      0{idx + 1}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg text-white">{item.title}</h4>
+                      <p className="text-sm text-slate-300 leading-relaxed mt-1">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-slate-900/80 border border-white/10 rounded-[2.5rem] p-8 md:p-12 relative overflow-hidden shadow-2xl backdrop-blur-md">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/20 blur-3xl rounded-full -mr-20 -mt-20 pointer-events-none" />
+              
+              <h3 className="text-2xl font-black mb-6 text-white flex items-center gap-2">
+                <Music className="text-indigo-400 w-6 h-6" />
+                Diga Adeus às Partituras Duras
+              </h3>
+              
+              <p className="text-slate-300 leading-relaxed mb-8">
+                Agora, além de todos os modos gregos, nosso material conta com o mapeamento completo e 100% visual de <strong>todas as escalas pentatônicas e penta blues</strong>. Diagramas limpos do formato exato do teclado para você apenas olhar e tocar.
+              </p>
+
+              <div className="space-y-4 bg-indigo-950/50 p-6 rounded-2xl border border-indigo-800/50">
+                <div className="flex justify-between items-center text-xs text-indigo-300 font-mono tracking-wider uppercase">
+                  <span>Estudo Tradicional Teérico</span>
+                  <span className="text-red-400 font-bold">Lento e Confuso</span>
+                </div>
+                <p className="text-slate-400 text-sm">Passar meses tentando entender graus e cálculos matemáticos antes de arriscar a primeira nota.</p>
+                
+                <div className="border-t border-indigo-900/50 my-2" />
+                
+                <div className="flex justify-between items-center text-xs text-indigo-300 font-mono tracking-wider uppercase">
+                  <span>Nosso Guia Rápido de Pentas</span>
+                  <span className="text-green-400 font-bold">Direto ao Ponto</span>
+                </div>
+                <p className="text-slate-200 text-sm font-semibold">Tocar com as formas visuais prontas de cada escala. Siga os desenhos das teclas e faça solos incríveis hoje mesmo.</p>
+              </div>
+
+              <div className="mt-8">
+                <Button onClick={scrollToOffer} className="w-full bg-[#6366f1] hover:bg-[#5053e3] text-white shadow-lg">
+                  QUERO DOMINAR OS IMPROVISOS
+                </Button>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
