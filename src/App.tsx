@@ -174,15 +174,15 @@ export default function App() {
               <div className="flex items-center gap-3 mb-2 md:mb-4">
                 <span className="text-slate-500 line-through text-sm md:text-lg font-medium opacity-60">De R$ 67,00</span>
                 <span className="bg-green-500/10 text-green-400 text-[10px] md:text-xs font-black px-2 py-1 rounded-lg uppercase tracking-wider border border-green-500/20">
-                  ECONOMIZE 60%
+                  ECONOMIZE 70%
                 </span>
               </div>
               <div className="flex flex-col items-center space-y-0">
                 <span className="text-slate-400 text-[10px] md:text-xs font-black uppercase tracking-[0.2em] opacity-40">Aproveite por apenas</span>
                 <div className="flex items-start">
                   <span className="text-white text-3xl font-black mt-2">R$</span>
-                  <span className="text-white text-7xl md:text-9xl font-black tracking-tighter leading-none">27</span>
-                  <span className="text-white text-3xl font-black mt-2">,00</span>
+                  <span className="text-white text-7xl md:text-9xl font-black tracking-tighter leading-none">19</span>
+                  <span className="text-white text-3xl font-black mt-2">,90</span>
                 </div>
               </div>
             </div>
@@ -562,8 +562,8 @@ export default function App() {
                 <span className="text-slate-500 line-through text-lg mb-2">De R$ 198,00</span>
                 <div className="flex items-start">
                   <span className="text-white text-3xl font-black mt-4">R$</span>
-                  <span className="text-white text-8xl md:text-9xl font-black tracking-tighter leading-none">27</span>
-                  <span className="text-white text-3xl font-black mt-4">,00</span>
+                  <span className="text-white text-8xl md:text-9xl font-black tracking-tighter leading-none">19</span>
+                  <span className="text-white text-3xl font-black mt-4">,90</span>
                 </div>
               </div>
 
@@ -590,7 +590,7 @@ export default function App() {
           <h2 className="text-4xl font-black mb-6">Garantia Blindada de 7 Dias</h2>
           <p className="text-slate-600 text-lg leading-relaxed mb-12">
             Eu tenho tanta certeza de que esse guia vai clarear sua mente que eu assumo todo o risco. 
-            Se em 7 dias você olhar para o PDF e achar que ele não vale os R$ 27,00, 
+            Se em 7 dias você olhar para o PDF e achar que ele não vale os R$ 19,90, 
             eu devolvo cada centavo sem perguntas chatas.
           </p>
         </div>
